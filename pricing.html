@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 20%;
+        }
+        #pl:hover{
+        color:green
+        }
+
+        #ki {
+           
+            font-size: 19px;
+            margin-left: 25px;
+            margin-top: -36px;
+        }
+
+        #ku {
+            margin-left: 37px;
+        }
+
+        #i1 {
+            width: 169px;
+            height: 46px;
+        }
+
+        #p1 {
+            font-size: 20px;
+            color: white;
+        }
+        #fr{
+            
+             text-decoration:none; color:rgb(131, 129, 129); position:absolute;margin-top:-32px; margin-left:-3px;
+        }
+        #fr:hover{
+            color:white;
+        }
+        #fq{
+            text-decoration:none; color:rgb(131, 129, 129);position:absolute;margin-top:-32px; margin-left:74px;
+        }
+       #fq:hover{
+           color:white;
+       }
+       #fz{
+         text-decoration:none; color:rgb(131, 129, 129);position:absolute;margin-top:-32px; margin-left:162px;
+       }
+       #fz:hover{
+           color:white;
+       }
+       #d4{
+         text-decoration: none;  margin-top:-94px;margin-left:-123px; color:rgb(131, 129, 129); width:12px;
+        -shadow: none; border-radius:10px;background-color:#5e1c7d; border-top:#5e1c7d;border-bottom: #5e1c7d; border-left: #5e1c7d; border-right: #5e1c7d;
+       }
+       #d4:hover{
+        color:white;
+       }
+       #fw{
+        text-decoration:none;color:rgb(131, 129, 129); position:absolute;margin-top:-34px; margin-left:403px;
+       }
+       #fw:hover{
+        color:white;
+       }
+     #fg{
+         text-decoration:none;color:rgb(131, 129, 129);position:absolute;margin-top:-35px; margin-left:471px;
+     }
+     #fg:hover{
+        color:white
+     }
+      #d1{
+       position:absolute;  border-style:groove;border-color:white;background-color:#5e1c7d;border-radius:10px;width:173px;height: 43px;margin-left:609px; top:54px;
+      }
+#d1:hover{
+   background-color:rgb(242, 215, 14);
+   
+}
+#d2{
+    position:absolute; border-bottom: rgb(223, 180, 99); border-right: rgb(223, 180, 99);  border-color:rgb(223, 180, 99);background-color:rgb(223, 180, 99);border-radius:10px;width:291px;height: 53px;margin-left:11px; top:330px;
+}
+#d3{
+    position:absolute; border-bottom: rgb(223, 180, 99); border-right: rgb(223, 180, 99);  border-color:rgb(223, 180, 99);background-color:rgb(223, 180, 99);border-radius:10px;width:291px;height: 53px;margin-left:10px; top:274px;
+}
+#d4{
+    position:absolute; border-bottom: rgb(223, 180, 99); border-right: rgb(223, 180, 99);  border-color:rgb(223, 180, 99);background-color:rgb(223, 180, 99);border-radius:10px;width:291px;height: 53px;margin-left:10px; top:329px;
+}
+#d2:hover{
+    background-color:black;
+    border-top: black;
+    border-bottom: black;
+    border-right: black;
+    border-left: black;
+
+}
+#d3:hover{
+    background-color:black;
+    border-top: black;
+    border-bottom: black;
+    border-right: black;
+    border-left: black;
+
+}
+#d4:hover{
+    background-color:black;
+    border-top: black;
+    border-bottom: black;
+    border-right: black;
+    border-left: black;
+
+}
+#bu1{
+    text-decoration: none;
+            margin-top: -94px;
+            margin-left: -123px;
+            color: rgb(131, 129, 129);
+            width: 12px;
+            -shadow: none;
+            border-radius: 10px;
+            background-color: #5e1c7d;
+            border-top: #5e1c7d;
+            border-bottom: #5e1c7d;
+            border-left: #5e1c7d;
+            border-right: #5e1c7d;
+}
+#bu1:hover{
+    color:white;
+}
+#a1{
+    color:whitesmoke;text-decoration: none;
+}
+#a11{
+    color:black;text-decoration: none;
+}
+#a11:hover{
+    color:white;
+}
+ #a1:hover{
+color: black;
+/* transform:scale(1.5); */
+
+ }
+ #s1{
+    font-size:18px;color:black;width:86%;margin-left:36px; margin-top:16px;height:37px;border-color: rgb(234, 167, 43); background-color: rgb(234, 167, 43);
+ }
+ #s1:hover{
+    background-color: black;
+    color: orange;
+    border-top: black;
+    border-bottom: black;
+    border-right: black;
+    border-left: black;
+ }
+ #sp1{
+font-size: 17px; color:white;
+ }
+ #sp1:hover{
+    color:yellow;
+ }
+ #sp2{
+    font-size: 17px; color:whitesmoke;
+ }
+#sp2:hover{
+    color:yellow;
+}
+#sp3{
+     margin-left:12px; font-size:16px; width:102px; height:53px; background-color: bisque; border-radius: 12px;
+}
+#sp3:hover{
+    color:white;
+    background-color: #5e1c7d;
+    border-top:#5e1c7d ;
+    border-bottom: #5e1c7d;
+    border-right: #5e1c7d;
+    border-left: #5e1c7d;
+}
+
+#ic1{
+   position:absolute; text-decoration: none;margin-top:5px; margin-left:43px; color:black;
+}
+#ic1:hover{
+    color:#5e1c7d;
+}
+#ic2{
+    position:absolute; text-decoration: none;margin-top:5px; margin-left:43px; color:black;
+}
+#ic2:hover{
+    color:#5e1c7d;
+}
+#x1{
+     font-size:46px;border-style:initial;border-top-color:black; border-radius: 3px;
+     margin-left:1017px; margin-top:-57px; width:40px; height:50px;background-color:aqua;
+}
+#x1:hover{
+    background-color: orange;
+}
+#i5{
+     border-radius:3px;font-size:43px;width:50px; margin-top:-50px; margin-left:1077px;height:50px;background-color: red;
+}
+#i5:hover{
+    background-color: orange;
+}
+ #f1{
+    font-size:42px; width:50px; margin-left:946px;margin-top:-50px;height:50px;background-color: white;
+} 
+#f1:hover{
+    background-color: orange;
+  
+}
+#f2{
+    color:black;
+}
+#f2:hover{
+    color:black;
+}
+#b1{
+   position:absolute;background-color: #9346b6; margin-left:6px; width:129px; height:38px; border-radius: 9px; top:7px;text-align: center; font-size:medium ;
+}
+#b1:hover{
+    background-color: aqua;
+}
+    </style>
+</head>
+
+<body>
+
+    <div class="container"
+        style="position:relative; background-color:  #5e1c7d ; width:92%;height:716px;margin:auto; top:10px;left:-5px;border-radius:12px">
+        
+            <a href="https://kriyado.com">
+                <img id="i1" src="https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo.png"
+                    class="attachment-full size-full wp-image-649" alt="Kriyado Digital Wallet Application"
+                    decoding="async"
+                    srcset="https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo.png 2844w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-300x82.png 300w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-1024x282.png 1024w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-768x211.png 768w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-1536x422.png 1536w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-2048x563.png 2048w"
+                    sizes="(max-width: 2844px) 130vw, 35px" style="margin-top: 64px; margin-left:1px;" /> </a>
+           
+        
+       
+        <div style=" margin-top:23px; background-color: #5e1c7d; width:57px;height:23px; margin-left:341px;">
+            <a id="fr"  href="home.html">Home</a>
+            <a id ="fq"  href="pricing.html">Pricing</a>
+            <a id ="fz" href="https://kriyado.com/about-kriyado/">About Us</a>
+
+            <a id ="fw" href="https://kriyado.com/faq/">FAQ</a>
+            <a id ="fg" href="contact.html">Contact</a>
+            <button id="d1" 
+            type="button">
+            <a id ="a1"  href="jap.html">Join as partner</a></button>
+            
+           
+            <div class="dropdown" style=" background-color: red;margin-top:-32px; margin-left:377px; top:12px;" >
+                <button  id="bu1" class="btn btn-secondary dropdown-toggle"   id="dropdownMenuButton" 
+               
+                 type="button" data-bs-toggle="dropdown"aria-haspopup="true" aria-expanded="false" a href="#">
+                  Benefits \/
+                </button>
+                <ul class="dropdown-menu" >
+                  <li><a class="dropdown-item" href="#">User Benefits</a></li>
+                  <li><a class="dropdown-item" href="#">Partner Benefits</a></li>
+                  
+                </ul>
+              </div>
+        </div>
+         <div class="grid-container"> 
+            <div style="position: relative; top:96px;color:white; width:499%;height:100%;background-color:#5e1c7d;">
+                <h1 style="font-size: 415%;margin-left:299px;">The packages for your</h1>
+                <h1 style="font-size: 415%;margin-left:525px;">needs</h1>
+               <div class="grid-container">
+                <div style="position:absolute;background-color: #5e1c7d; width:131px; margin-top:10px; left:374px;">Unlimited usage</div>
+                <div style="position:absolute; background-color: #5e1c7d; width:180px; left:546px; margin-top:10px;" >Switch plans anytime</div>
+                <div style="background-color:#5e1c7d; position:absolute;width:125px; margin-left: 779px; margin-top:10px;" >Cancel Anytime</div>
+               </div><br><br>
+             <div class="grid-container" style=" position:absolute; top:234px;background-color: white; width:456px;height:53px; margin-left:406px; border-radius: 12px;">
+                <div id="b1"><a style="position:absolute;margin-top:5px; margin-left: -22px;">Basic</a></div>
+                <div style="position:absolute;background-color: white; margin-left:157px; width:129px; height:38px; border-radius: 9px; top:7px;"><a id="ic1"  href="pricing.html" >Combo</a></div>
+                <div style="position:absolute;background-color: white; width:160px; height:38px;  margin-left:288px; border-radius: 9px; top:7px;"><a id="ic2"  href="pricing.html">Grand Package</a></div>
+             </div>
+                </div>
+                
+            </div><br>
+            <div class="grid-container" style="margin-left:12px;"> 
+            <div style="background-color: blue;">hgghh</div>
+            <div style="background-color: pink;">hgghh</div>
+</div>
+         </div><br> 
+
+         <div class="card" style="position:absolute;width: 22rem; top:772px;height:47rem;margin-left:144px; border-radius: 20px; background-color: #FAE5FB;">
+            <div style="position:absolute; background-color: FAE5FB; width:350px;height:341px; border-radius: 20px" >
+                
+            <h4 class="text-center" style="position:absolute; font-size:18px; margin-left:136px; top:45px;color:#5e1c7d">Kriyado</h4><br>
+            <h4 class="text-center" style="position:absolute;font-size: 35px;top:74px; margin-left:102px;color:#5e1c7d">Lifestyle</h4><br>
+            <p style="position:absolute;font-size:17px;top:131px;margin-left:34px;color:#151e31a6">Indulge in luxury without compromise</p><br>
+            <p style="position:absolute;font-size:17px;top:153px;margin-left:91px;color:#151e31a6"> with Kriyado Lifestyle.</p><br>
+            <h3 style=" text-decoration:line-through;position:absolute;top:208px;margin-left:40px;font-size:24px;color:#8c999d">₹ 1499</h3><br>
+            <h3 style=" position:absolute;top:197px;margin-left:124px;font-size:36px;color:#B31998">₹ 999</h3>
+            <p style="position:absolute; top:211px;margin-left: 224px; font-size:17px;color:#151e31a6">for 1 year</p><br>
+            <p style="position:absolute; top:241px;margin-left:114px; font-size:13px;color:#151e31a6">for limited period *</p><br>
+            <div style="position:absolute; background-color: black; width:15px; height:15px;border-radius: 73px; margin-left:185px; top:292px;"></div>
+            <div style="position:absolute; background-color: black; width:309px; height:1px;border-radius: -11px; margin-left:19px; top:300px;"></div>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="card-body" style="position:absolute; background-color: #FAE5FB;top:313px;"><br>
+              <h5 class="card-title" style="position:absolute; font-size:28px; top:31px;">Features</h5><br><br>
+              <ul type="square">
+                <li style=" position:absolute;font-size:17px; top:81px; ">Textiles</li>
+                <li style="position:absolute;font-size:17px;top:120px;">
+                    Boutiques</li>
+                <li style="position:absolute;font-size:17px;top:163px;">Saloon/Spa</li>
+                <li style="position:absolute;font-size:17px;top:208px;">Restaurants/Hotels</li>
+                <li style="position:absolute;font-size:17px;top:249px;">Furniture</li>
+            
+            </ul> <br><br>
+            <button id="d2" 
+            type="button">
+            <a id ="a11"  href="pricing.html">Book Now</a></button>
+              
+            </div>
+          </div>
+          <div class="card" style="position:absolute;top:772px;width: 22rem; height:47rem;margin-left:513px; border-radius: 20px;background-color:#FAE5FB;">
+            <div style="position:absolute; background-color: FAE5FB; width:350px;height:341px; border-radius: 20px" >
+                <div style=" position:absolute;background-color: #EBBDF4; width:96px; height:30px;border-radius: 16px; margin-left: 255px; "> <p style="position:absolute;font-size:15px; margin-left:11px; top:3px;">Best Seller</p></div>
+            <h4 class="text-center" style="position:absolute; font-size:18px; margin-left:136px; top:45px;color:#5e1c7d">Kriyado</h4><br>
+            <h4 class="text-center" style="position:absolute;font-size: 35px;top:74px; margin-left:121px; color:#5e1c7d">Utility</h4><br>
+            <p style="position:absolute;font-size:17px;top:131px;margin-left:66px;color:#151e31a6">Dive into savings on everyday</p><br>
+            <p style="position:absolute;font-size:17px;top:153px;margin-left:59px;color:#151e31a6"> essentials with Kriyado Utilities</p><br>
+            <h3 style=" text-decoration:line-through;position:absolute;top:208px;margin-left:40px;font-size:24px;color:#8c999d">₹ 1499</h3><br>
+            <h3 style=" position:absolute;top:197px;margin-left:124px;font-size:36px;color:#B31998">₹ 999</h3>
+            <p style="position:absolute; top:211px;margin-left: 224px; font-size:17px;color:#151e31a6">for 1 year</p><br>
+            <p style="position:absolute; top:241px;margin-left:114px; font-size:13px;color:#151e31a6">for limited period *</p><br>
+            <div style="position:absolute; background-color: black; width:15px; height:15px;border-radius: 73px; margin-left:185px; top:292px;"></div>
+            <div style="position:absolute; background-color: black; width:309px; height:1px;border-radius: -11px; margin-left:19px; top:300px;"></div>
+        </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <div class="card-body" style="position:absolute;top:313px; background-color: #FAE5FB;"><br>
+              <h5 class="card-title" style="position:absolute; font-size:28px; top:31px;">Features</h5><br><br>
+              <ul type="square">
+                <li style=" position:absolute;font-size:17px; top:81px; ">Groceries</li>
+                <li style="position:absolute;font-size:17px;top:120px;">
+                    Super&nbspMarket</li>
+                <li style="position:absolute;font-size:17px;top:163px;">Hypermarkets</li>
+                <li style="position:absolute;font-size:17px;top:208px;">
+                    Bakery/Grills/Teaspots</li>
+                
+            
+            </ul> <br><br>
+            <button id="d3" 
+            type="button">
+            <a id ="a11"  href="pricing.html">Book Now</a></button>
+              
+            </div>
+
+        <!-- jijk -->
+        <br><br><br>
+
+    </div><br>
+
+
+    <div class="card" style="position:absolute;width: 22rem; height:47rem;margin-left:884px; top:772px;border-radius: 20px; background-color:#FAE5FB;">
+        <div style="position:absolute; background-color: #FAE5FB; width:350px;height:341px; border-radius: 20px" >
+        <h4 class="text-center" style="position:absolute; font-size:18px; margin-left:136px; top:45px;color:#5e1c7d">Kriyado</h4><br>
+        <h4 class="text-center" style="position:absolute;font-size: 35px;top:74px; margin-left:105px;color:#5e1c7d">Services</h4><br>
+        <p style="position:absolute;font-size:17px;top:131px;margin-left:47px;color:#151e31a6">Keep your lifestyle running smoothly</p><br>
+        <p style="position:absolute;font-size:17px;top:153px;margin-left:99px;color:#151e31a6">with Kriyado Services</p><br>
+        <h3 style=" text-decoration:line-through;position:absolute;top:208px;margin-left:40px;font-size:24px;color:#8c999d">₹ 1499</h3><br>
+        <h3 style=" position:absolute;top:197px;margin-left:124px;font-size:36px;color:#B31998">₹ 999</h3>
+        <p style="position:absolute; top:211px;margin-left: 224px; font-size:17px;color:#151e31a6">for 1 year</p><br>
+        <p style="position:absolute; top:241px;margin-left:114px; font-size:13px;color:#151e31a6">for limited period *</p><br>
+        <div style="position:absolute; background-color: black; width:15px; height:15px;border-radius: 73px; margin-left:185px; top:292px;"></div>
+        <div style="position:absolute; background-color: black; width:309px; height:1px;border-radius: -11px; margin-left:19px; top:300px;"></div>
+    </div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <div class="card-body" style="position:absolute;top:313px;"><br>
+          <h5 class="card-title" style="position:absolute; font-size:28px; top:31px;">Features</h5><br><br>
+          <ul type="square">
+            <li style=" position:absolute;font-size:17px; top:81px; ">Automobile&nbspServices</li>
+            <li style="position:absolute;font-size:17px;top:120px;">
+                Workshops</li>
+            <li style="position:absolute;font-size:17px;top:163px;">Electronic&nbspServices</li>
+            
+        
+        </ul> <br><br>
+        <button id="d4" 
+        type="button">
+        <a id ="a11"  href="pricing.html">Book Now</a></button>
+          
+        </div>
+
+    <!-- jijk -->
+    <br><br><br>
+
+</div><br>
+    </div>
+</body>
+
+</html>
+</div>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<br><br>
+<div class="container"
+    style="position:relative; background-color:  #5e1c7d ; width:92%;height:735px;margin:auto; top:514px;left:-50px;border-radius:12px">
+    <div class="grid-container">
+        <div
+            style=" margin-left:13px; background-color:#5e1c7d;border-color:blueviolet;width:414px;height:211px; margin-top:148px;">
+            <a href="https://kriyado.com" style="margin-top:1px;">
+                <img id="i1" src="https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo.png"
+                    class="attachment-full size-full wp-image-649" alt="Kriyado Digital Wallet Application"
+                    decoding="async"
+                    srcset="https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo.png 2844w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-300x82.png 300w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-1024x282.png 1024w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-768x211.png 768w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-1536x422.png 1536w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-2048x563.png 2048w"
+                    sizes="(max-width: 2844px) 100vw, 2844px" /> </a>
+            <br>
+            <p id="p1">Discover, engage, and save with Kriyado – your dynamic companion in the world of smart
+                shopping.</p>
+        </div>
+
+    </div>
+    <div style="margin-left:442px; margin-top:-223px;background-color:#5e1c7d; width:288px;height:306px;">
+        <h2 style="margin-top: 13px; margin-left:38px; color:white;">&nbsp Quick Links</h2>
+        <div style="width:210px;height:186px;background-color:#5e1c7d;margin-top:33px; margin-left:54px;">
+            <a style="text-decoration: none;" href="https://kriyado.com/faq/">
+
+                <span id="sp1" class="elementor-icon-list-text" >FAQ</span>
+            </a><br><br>
+            <a style="text-decoration: none;" href="https://kriyado.com/terms-conditions/">
+
+                <span id="sp2" class="elementor-icon-list-tex" >Terms &
+                    Conditions</span>
+            </a><br><br>
+            <a style="text-decoration: none;" href="https://kriyado.com/privacy-policy/">
+
+                <span id="sp2"class="elementor-icon-list-text" >Privacy Policy</span>
+            </a><br><br>
+            <a href="https://kriyado.com/grievance-redressal-policy/" style="text-decoration: none;">
+
+                <span id="sp2" class="elementor-icon-list-text">Grievance Redressal
+                    Policy</span>
+            </a><br><br>
+            <a href="https://kriyado.com/cancellation-refund-policy/" style="text-decoration: none;">
+
+                <span id="sp2"class="elementor-icon-list-text" >Refund Policy</span>
+            </a>
+
+        </div>
+        <div style=" margin-left:319px;margin-top:-186px;width:210px;height:186px;background-color:#5e1c7d">
+            <a style="text-decoration: none;" href="https://kriyado.com/about-us/">
+
+                <span id="sp2" class="elementor-icon-list-text" >About Kriyado</span>
+            </a><br><br>
+            <a style="text-decoration: none;" href="https://kriyado.com/pricing/">
+
+                <span id="sp2" class="elementor-icon-list-text" >Pricing</span>
+            </a><br><br>
+            <a style="text-decoration: none;" href="https://kriyado.com/blog/">
+
+                <span id="sp2" class="elementor-icon-list-text" >Blog</span>
+            </a><br><br>
+            <a href="contact.html" style="text-decoration: none;">
+
+                <span id="sp2" class="elementor-icon-list-text">Contact us</span>
+            </a><br><br>
+            <a href="https://kriyado.com/download-kriyado-app/" style="text-decoration: none;">
+
+                <span id="sp2" class="elementor-icon-list-text" >Download</span>
+            </a>
+
+        </div>
+
+    </div>
+    <div style=" margin-top:-317px; margin-left:925px;background-color:#5e1c7d; width:198px;height:309px;">
+
+        <h2 style="margin-top: 13px; margin-left:10px; color:white;"> Contact Us</h2>
+
+        <div class="hu">
+
+            <div id="d3" style="margin-top:-68px; margin-left:40px;width:108px; height:99px;background-color:#5e1c7d;">
+                <h5 class="title" style="color:violet;font-size:19px;">Email</h5>
+                <p class="icon-box-description" style="font-size:17px; margin-top:-9px;">
+                    <a href="mailto:support@kriyado.com" style=" text-decoration:none;color:white"
+                        target="_blank">support@kriyado.com</a>
+                </p>
+            </div>
+            <div id="d4" style="margin-top:-31px; margin-left:40px;width:141px; height:99px;background-color:#5e1c7d;">
+                <h5 class="title" style="color:violet;font-size:19px; margin-top:15px;">Phone</h5>
+                <p class="icon-box-description" style="font-size:17px; margin-top:-10px;">
+                    <a href="tel:+919048001820" style="text-decoration:none;color:white" target="_blank">+91 90480
+                        01820</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div style=" margin-top:64px;margin-left:12px;background-color:#5e1c7d; width:50%;">
+        <h1 style=" margin-top:1px;color:white;font-size: 27px;">Experience the Kriyado advantage <br>now.</h1>
+    </div>
+    <a href="pricing.html"><button id="sp3"
+        >
+         Pricing</button></a>
+    
+    <br>
+    <div>
+        <div id="x1"
+           >
+            <a style="text-decoration:none;" class="" href="https://www.facebook.com/KriyadoApp/"> X</a>
+        </div>
+        <div id="i5"
+           >
+            <a style="text-decoration:none;" class="" href="https://www.instagram.com/kriyadoapp/"><strong>&nbsp I</strong></a></div>
+        <div id="f1"
+            >
+            <strong>
+                <a id="f2" style="text-decoration:none;" class="" href="https://www.facebook.com/KriyadoApp/">&nbsp f</a>
+            </strong></div>
+    </div>
+    <div
+        style=" color:rgb(126, 121, 121);margin-top:139px;margin-left:430px;background-color:white;width:384px;height:50px;">
+        <p>Copyright © 2024 | Kriyado Discount Platform.</p>
+    </div>
+</div><br><br>
+
+</body>
+
+</html>
