@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            background-color: #FAE5FB;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 20% 20%;
+        }
+
+        #pl:hover {
+            color: green
+        }
+
+        #ki {
+
+            font-size: 19px;
+            margin-left: 25px;
+            margin-top: -36px;
+        }
+
+        #ku {
+            margin-left: 37px;
+        }
+
+        #i1 {
+            width: 169px;
+            height: 46px;
+        }
+
+        #p1 {
+            font-size: 20px;
+            color: white;
+        }
+
+        #fr {
+
+            text-decoration: none;
+            color: rgb(131, 129, 129);
+            position: absolute;
+            margin-top: -32px;
+            margin-left: -3px;
+        }
+
+        #fr:hover {
+            color: white;
+        }
+
+        #fq {
+            text-decoration: none;
+            color: rgb(131, 129, 129);
+            position: absolute;
+            margin-top: -32px;
+            margin-left: 74px;
+        }
+
+        #fq:hover {
+            color: white;
+        }
+
+        #fz {
+            text-decoration: none;
+            color: rgb(131, 129, 129);
+            position: absolute;
+            margin-top: -32px;
+            margin-left: 162px;
+        }
+
+        #fz:hover {
+            color: white;
+        }
+
+        #d4 {
+            text-decoration: none;
+            margin-top: -94px;
+            margin-left: -123px;
+            color: rgb(131, 129, 129);
+            width: 12px;
+            -shadow: none;
+            border-radius: 10px;
+            background-color: #5e1c7d;
+            border-top: #5e1c7d;
+            border-bottom: #5e1c7d;
+            border-left: #5e1c7d;
+            border-right: #5e1c7d;
+        }
+
+        #d4:hover {
+            color: white;
+        }
+
+        #fw {
+            text-decoration: none;
+            color: rgb(131, 129, 129);
+            position: absolute;
+            margin-top: -34px;
+            margin-left: 403px;
+        }
+
+        #fw:hover {
+            color: white;
+        }
+
+        #fg {
+            text-decoration: none;
+            color: rgb(131, 129, 129);
+            position: absolute;
+            margin-top: -35px;
+            margin-left: 471px;
+        }
+
+        #fg:hover {
+            color: white
+        }
+
+        #d1 {
+            position: absolute;
+            border-style: groove;
+            border-color: white;
+            background-color: #5e1c7d;
+            border-radius: 10px;
+            width: 173px;
+            height: 43px;
+            margin-left: 609px;
+            top: 54px;
+        }
+
+        #d1:hover {
+            background-color: rgb(242, 215, 14);
+
+        }
+
+        #a1 {
+            color: whitesmoke;
+            text-decoration: none;
+        }
+
+        #a1:hover {
+            color: black;
+        }
+
+        #a9 {
+            color: black;
+            text-decoration: none;
+        }
+
+        #a10 {
+            position: absolute;
+            font-size: 17px;
+            text-decoration: none;
+            margin-left: -97px;
+            top: 15px;
+            color: black;
+        }
+
+        #a10:hover {
+            color: white;
+        }
+
+        #a9:hover {
+            color: white;
+        }
+
+        #s1 {
+            font-size: 18px;
+            color: black;
+            width: 86%;
+            margin-left: 36px;
+            margin-top: 16px;
+            height: 37px;
+            border-color: rgb(234, 167, 43);
+            background-color: rgb(234, 167, 43);
+        }
+
+        #s1:hover {
+            background-color: black;
+            color: orange;
+            border-top: black;
+            border-bottom: black;
+            border-right: black;
+            border-left: black;
+        }
+
+        #sp1 {
+            font-size: 17px;
+            color: white;
+        }
+
+        #sp1:hover {
+            color: yellow;
+        }
+
+        #sp2 {
+            font-size: 17px;
+            color: whitesmoke;
+        }
+
+        #sp2:hover {
+            color: yellow;
+        }
+
+        #sp3 {
+            margin-left: 12px;
+            font-size: 16px;
+            width: 102px;
+            height: 53px;
+            background-color: bisque;
+            border-radius: 12px;
+        }
+
+        #sp3:hover {
+            color: white;
+            background-color: #5e1c7d;
+            border-top: #5e1c7d;
+            border-bottom: #5e1c7d;
+            border-right: #5e1c7d;
+            border-left: #5e1c7d;
+        }
+
+        #sp4 {
+            margin-left: 12px;
+            font-size: 16px;
+            width: 120px;
+            height: 53px;
+            background-color: bisque;
+            border-radius: 12px;
+            border-top: bisque;
+            border-bottom: bisque;
+            border-right: bisque;
+            border-left: bisque;
+        }
+
+        #sp4:hover {
+            color: white;
+            background-color: black;
+            border-top: black;
+            border-bottom: black;
+            border-right: black;
+            border-left: black;
+        }
+
+        #sp6:hover {
+            color: white;
+
+            background-color: black;
+            border-top: black;
+            border-bottom: black;
+            border-right: black;
+            border-left: black;
+        }
+
+        #sp5 {
+            position: absolute;
+            margin-left: 11px;
+            font-size: 16px;
+            width: 261px;
+            height: 53px;
+            top: 612px;
+            background-color: bisque;
+            border-radius: 12px;
+            border-top: bisque;
+            border-bottom: bisque;
+            border-right: bisque;
+            border-left: bisque;
+        }
+
+        #sp5:hover {
+            background-color: black;
+        }
+
+        #sp6 {
+            position: absolute;
+            margin-left: 468px;
+            font-size: 16px;
+            width: 142px;
+            height: 53px;
+            background-color: bisque;
+            border-radius: 12px;
+            border-top: bisque;
+            border-bottom: bisque;
+            border-right: bisque;
+            border-left: bisque;
+            top: 358px;
+        }
+#ae1{
+    position:absolute;
+    width:80px;height:80px; 
+    background-color:orange;
+     margin-left: 28px;
+     top:23px;
+     border-radius:17px;
+}
+        #ae1:hover {
+            background-color:rgb(164, 17, 178);
+        }
+
+        #x1 {
+            font-size: 46px;
+            border-style: initial;
+            border-top-color: black;
+            border-radius: 3px;
+            margin-left: 1017px;
+            margin-top: -57px;
+            width: 40px;
+            height: 50px;
+            background-color: aqua;
+        }
+
+        #x1:hover {
+            background-color: orange;
+        }
+
+        #i5 {
+            border-radius: 3px;
+            font-size: 43px;
+            width: 50px;
+            margin-top: -50px;
+            margin-left: 1077px;
+            height: 50px;
+            background-color: red;
+        }
+
+        #i5:hover {
+            background-color: orange;
+        }
+
+        #f1 {
+            font-size: 42px;
+            width: 50px;
+            margin-left: 946px;
+            margin-top: -50px;
+            height: 50px;
+            background-color: white;
+        }
+
+        #f1:hover {
+            background-color: orange;
+
+        }
+
+        #f2 {
+            color: black;
+        }
+
+        #f2:hover {
+            color: black;
+        }
+
+        #b1 {
+            position: absolute;
+            background-color: #9346b6;
+            margin-left: 6px;
+            width: 129px;
+            height: 38px;
+            border-radius: 9px;
+            top: 7px;
+            text-align: center;
+            font-size: medium;
+        }
+
+        #b1:hover {
+            background-color: aqua;
+        }
+
+        #b2 {
+            background-color: #FAE5FB;
+
+            position: absolute;
+            margin-left: 237px;
+            border-radius: 12px;
+
+            width: 270px;
+            height: 65px;
+            top: 48px;
+        }
+
+        #b3 {
+            background-color: #FAE5FB;
+            position: absolute;
+            margin-left: 163px;
+            border-radius: 12px;
+            width: 270px;
+            height: 65px;
+            top: 144px;
+        }
+
+        #b4 {
+            background-color: #FAE5FB;
+            position: absolute;
+            margin-left: 123px;
+            border-radius: 12px;
+            width: 270px;
+            height: 65px;
+            top: 235px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container"
+        style="position:relative; background-color: #5e1c7d ; width:92%;height:716px;margin:auto; top:10px;left:-5px;border-radius:12px">
+
+        <a href="https://kriyado.com">
+            <img id="i1" src="https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo.png"
+                class="attachment-full size-full wp-image-649" alt="Kriyado Digital Wallet Application" decoding="async"
+                srcset="https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo.png 2844w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-300x82.png 300w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-1024x282.png 1024w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-768x211.png 768w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-1536x422.png 1536w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-2048x563.png 2048w"
+                sizes="(max-width: 2844px) 130vw, 35px" style="margin-top: 64px; margin-left:1px;" />
+        </a>
+
+
+
+        <div style=" margin-top:23px; background-color: #5e1c7d; width:57px;height:23px; margin-left:341px;">
+            <a id="fr" href="home.html">Home</a>
+            <a id="fq" href="pricing.html">Pricing</a>
+            <a id="fz" href="https://kriyado.com/about-kriyado/">About Us</a>
+            <a id="fw" href="https://kriyado.com/faq/">FAQ</a>
+            <a id="fg" href="contact.html">Contact</a>
+            <button id="d1" type="button">
+                <a id="a1" href="jap.html">Join as partner</a></button>
+
+            <div class="dropdown" style=" background-color: red;margin-top:-32px; margin-left:377px; top:12px;">
+                <button id="d4" class="btn btn-secondary dropdown-toggle" id="dropdownMenuButton" type="button"
+                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" a href="#">
+                    Benefits \/
+                </button>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">User Benefits</a></li>
+                    <li><a class="dropdown-item" href="#">Partner Benefits</a></li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div style="position: relative; top:96px;color:white; width:499%;height:100%;background-color:#5e1c7d;">
+                <h1 style="font-size: 415%;margin-left:544px;">Shop More, It's Your Shopping Catalyst.</h1>
+                <div class="grid-container">
+
+                </div><br><br>
+
+                <a href="https://play.google.com/store/apps/details?id=com.richin.kriyado"> <img src="gp.webp"
+                        style=" position:absolute;width:145px;height:50px; margin-left:556px;"></a>
+                <img src="download (2).jpeg"
+                    style=" position:absolute; top:10px;margin-left:284px;width:234px; height:459px;background-color: #5e1c7d;">
+            </div>
+
+
+        </div><br>
+        <div
+            style=" position:absolute;background-color: orange; width:150px;height:143px; border-radius: 73px; margin-left:962px; top:625px;">
+            <a href="pricing.html"> <img src="thinarrow.webp" style="position: absolute; width:40px;height:42px; margin-left:55px;top:48px;"></a>
+        </div>
+
+
+    </div>
+    <div class="grid-container"
+        style="position:absolute;background-color: #FAE5FB; height:364px;width:1156px;top:935px;margin-left: 60px;">
+        <div style=" position:absolute;background-color: #FAE5FB; width:459px;height:564px;">
+            <h1 style="font-size: 60px;">Beyond Transactions, Unveiling Value.</h1><br>
+            <p style="font-size:17px">Welcome to Kriyado, a dynamic and innovative digital<br>discount wallet platform
+                designed to elevate your shopping<br> experience.</p> <br>
+            <ul type="square">
+                <li style="font-size:17px">Founded on the principles of collaborative commerce.</li>
+                <li style="font-size:17px">Kriyado is not just a platform; it's a transformative space.</li>
+                <li style="font-size:17px">Creating a vibrant ecosystem of savings and satisfaction.</li>
+            </ul> <br><br>
+            <button id="sp4">
+                About Us</button>
+
+        </div>
+
+        <div style=" position:absolute;background-color: #FAE5FB; margin-left:459px; width:695px;height:491px;">
+            <div style=" position:absolute;background-color: #5e1c7d; width:542px;height:126px; top:397px;margin-left:172px;border-radius:22px;">
+                <div id="ae1">
+                   <a href="https://www.youtube.com/watch?v=O7aMbnQCfpY"> <img   src="playbutton.jpg" style="position: absolute; width:54px;height:58px; margin-left:12px;top:10px;"></a>
+                </div>
+                <h4 style=" color:#FAE5FB;position:absolute;margin-left:129px; top:35px; font-size: 26px;">Kriyado Grand</h4>
+                <p style=" position:absolute;margin-left:129px; top:68px; font-size: 16px; color:#FCEEFFB8">With all the above three!</p>
+            </div>
+            <img src="imageman.webp" style=" position:absolute;width:279px; height:523px;margin-left:470px;">
+            <button id="b2">
+                <div style=" position:absolute;background-color: #5e1c7d; width:44px;height:44px; top:9px;"></div>
+                <a href="home.html"
+                    style=" position:absolute;font-size:22px;text-decoration: none;margin-left:-61px; top:15px; color:black">Kriyado
+                    Utilities</a>
+            </button><br>
+            <button id="b3">
+                <div style=" position:absolute;background-color: #5e1c7d; width:44px;height:44px; top:9px;"></div>
+                <a href="home.html"
+                    style=" position:absolute;font-size:22px;text-decoration: none;margin-left:-61px; top:15px; color:black">
+                    Kriyado Lifestyle</a>
+            </button><br>
+            <button id="b4">
+                <div style=" position:absolute;background-color: #5e1c7d; width:44px;height:44px; top:9px;"></div>
+                <a href="home.html"
+                    style=" position:absolute;font-size:22px;text-decoration: none;margin-left:-61px; top:15px; color:black">
+
+                    Kriyado Services</a>
+            </button><br>
+
+        </div>
+    </div>
+    <br>
+    <div class="grid-contianer"
+        style="position:absolute;background-color: #FAE5FB; height:364px;width:1156px;top:1561px;margin-left: 60px;">
+        <div style="background-color:#333333;width:549px;height:806px; border-radius:14px;">
+
+            <img src="serving.webp" style=" position:absolute;margin-left:37px;width:473px; height:736px; top:35px;">
+        </div>
+        <div
+            style=" position:absolute;background-color: #FAE5FB; width:568px;height:744px; margin-left:605px; top:77px;">
+            <h1 style="font-size: 60px;">Digital Mall for Small and Medium Local Vendors</h1><br>
+            <p style="font-size:17px">Kriyado is a digital mall for local vendors where small and medium local vendors
+                can create their own digital store and publish their offers and deals to digital customers locally.
+                Kriyado will display the local vendors to local audience for much more conversion.
+            <ul type="square">
+                <li style=" position:absolute;font-size:17px; top:400px; ">FREE of cost registration with no hidden
+                    charges.</li>
+                <li style="position:absolute;font-size:17px;top:442px;">Publish Product / Services through digital
+                    portal for FREE.</li>
+                <li style="position:absolute;font-size:17px;top:485px;">Bill directly to customers</li>
+                <li style="position:absolute;font-size:17px;top:526px;">Kriyado shall do paid campaigns for you for more
+                    reach.</li>
+            </ul> <br><br>
+
+            <button id="sp5">
+                <a id="a9" href="jap.html">
+
+                    Be a Kriyago partner now!</a></button>
+
+        </div> <br>
+
+    </div><br><br>
+
+    <div style="position:absolute;background-color:#5e1c7d; height:454px;width:1345px;top:2470px;margin-left: 0px;">
+        <h1 style="position:absolute;font-size: 376%;margin-left:90px;top:101px;color:white;">Want to recommend a
+            store/shop you </h1>
+        <h1 style=" position:absolute; font-size: 376%;margin-left:353px;top:169px; color:white;">frequently visit?</h1>
+        <p style=" position:absolute;font-size:17px; top:256px; margin-left:25px; color:whitesmoke">Share the details of
+            the store/shop you visit freequently, our team will get in touch with them and if they are ready to be a
+            Kriyado Partner then hureyyy!! you can </p>
+        <p style="position:absolute;font-size:17px; top:281px; margin-left:582px;  color:whitesmoke;">shop more</p>
+        <button id="sp6"><a id="a9" href="contact.html">Contact Us</a>
+        </button><br>
+        <a href="https://play.google.com/store/apps/details?id=com.richin.kriyado"><img src="gp.webp"
+                style=" position:absolute;width:173px;height:50px; margin-left:621px; top:360px;"></a>
+
+
+    </div><br>
+    <div class="grid-container">
+        <div style="position:absolute;background-color: #FAE5FB; top:2976px;height:364px;width:1156px;">
+            <div
+                style=" position:absolute;background-color: #FAE5FB; width:286px; height:350px;top:165px;margin-left:46px;">
+                <div style="position:absolute; background-color: #9B59B6;width:75px; height:75px; border-radius:12px;">
+                    <img src="gpjj.webp"
+                        style="position:absolute;width:39px;height:39px; top: 16px; margin-left:17px; ">
+                </div>
+                <h5 class="card-title" style="position:absolute; font-size:24px; top:101px; color:#151E31">Kriyado
+                    Utlility</h5><br><br>
+                <p style="position: absolute; top:147px;">Dive into savings on everyday essentials with Kriyado
+                    Utilities. Exclusive discounts on groceries, supermarkets, and provision stores await subscribers.
+                    Priced at 999 INR for a one-year subscription, this package is designed to make your routine
+                    purchases a source of ongoing benefits.</p>
+            </div><br>
+
+            <div
+                style=" position:absolute;background-color: #FAE5FB; width:286px; height:350px;top:555px;margin-left:38px;">
+                <div style="position:absolute; background-color: #9B59B6;width:75px; height:75px; border-radius:12px;">
+                    <img src="gpjj.webp"
+                        style="position:absolute;width:39px;height:39px; top: 16px; margin-left:17px; ">
+                </div>
+                <h5 class="card-title" style="position:absolute; font-size:24px; top:101px; color:#151E31">Kriyado
+                    Lifestyle</h5><br><br>
+                <p style="position: absolute; top:147px;">Indulge in luxury without compromise with Kriyado Lifestyle.
+                    This package opens the door to exclusive discounts at boutiques, textiles, spas, salons,
+                    restaurants, and hotels. Secure your subscription for 999 INR for one year, and experience a world
+                    where &nbsp lifestyle meets savings.</p>
+            </div><br>
+
+            <div
+                style=" position:absolute;background-color: #FAE5FB; width:299px; height:350px;top:165px;margin-left:1011px;">
+                <div
+                    style="position:absolute; background-color: #9B59B6;width:75px; height:75px; margin-left:210px; border-radius:12px;">
+                    <img src="gpjj.webp"
+                        style="position:absolute;width:39px;height:39px; top: 16px; margin-left:17px; ">
+                </div>
+                <h5 class="card-title"
+                    style="position:absolute; font-size:24px; top:101px; margin-left:111px;color:#151E31">Kriyado
+                    Services</h5><br><br>
+                <p style="position: absolute; top:147px;">Keep your lifestyle running smoothly with Kriyado Services.
+                    Enjoy exclusive discounts from service centers, covering automobiles, electronics, and more. Avail
+                    this package at 999 INR for a one-year subscription, ensuring your essential services come with
+                    <br>added benefits.
+                </p>
+            </div><br>
+            <div
+                style=" position:absolute;background-color: #FAE5FB; width:299px; height:350px;top:555px;margin-left:1011px;">
+                <div
+                    style="position:absolute; background-color: #9B59B6;width:75px; height:75px; margin-left:210px; border-radius:12px;">
+                    <img src="gpjj.webp"
+                        style="position:absolute;width:39px;height:39px; top: 16px; margin-left:17px; ">
+                </div>
+                <h5 class="card-title"
+                    style="position:absolute; font-size:24px; top:101px; margin-left:80px;color:#151E31">
+                    The&nbspGrand&nbspPackage</h5><br><br>
+                <p style="position: absolute; top:147px;">For those seeking the ultimate Kriyado experience, our Grand
+                    Package beckons. Subscribe to all three packages at an exclusive rate of ₹ 1499 INR for one year,
+                    unlocking a comprehensive spectrum of benefits across Utilities, Lifestyle, and Services. </p>
+            </div>
+<div>
+    <h2 style="position:absolute;font-size:1.5cm; top:-1px; margin-left:386px; font-family: inherit;">Custom packages for<br>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspyour needs. </h2>
+    <img src="kriyadomob.webp" style=" position:absolute;width:482px;height:861px;margin-left:403px; top:156px;">
+</div>
+
+        </div>
+
+    </div>
+
+
+    <br><br>
+<div class="container"
+    style="position:absolute; background-color:  #5e1c7d ; width:92%;height:735px;margin-left:99px; top:4129px;left:-50px;border-radius:12px">
+    <div class="grid-container">
+        <div
+            style=" margin-left:13px; background-color:#5e1c7d;border-color:blueviolet;width:414px;height:211px; margin-top:148px;">
+            <a href="https://kriyado.com" style="margin-top:1px;">
+                <img id="i1" src="https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo.png"
+                    class="attachment-full size-full wp-image-649" alt="Kriyado Digital Wallet Application"
+                    decoding="async"
+                    srcset="https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo.png 2844w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-300x82.png 300w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-1024x282.png 1024w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-768x211.png 768w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-1536x422.png 1536w, https://kriyado.com/wp-content/uploads/2024/01/Kriyado-white-logo-2048x563.png 2048w"
+                    sizes="(max-width: 2844px) 100vw, 2844px" /> </a>
+            <br>
+            <p id="p1">Discover, engage, and save with Kriyado – your dynamic companion in the world of smart
+                shopping.</p>
+        </div>
+
+    </div>
+    <div style="margin-left:442px; margin-top:-223px;background-color:#5e1c7d; width:288px;height:306px;">
+        <h2 style="margin-top: 13px; margin-left:38px; color:white;">&nbsp Quick Links</h2>
+        <div style="width:210px;height:186px;background-color:#5e1c7d;margin-top:33px; margin-left:54px;">
+            <a style="text-decoration: none;" href="https://kriyado.com/faq/">
+
+                <span id="sp1" class="elementor-icon-list-text" >FAQ</span>
+            </a><br><br>
+            <a style="text-decoration: none;" href="https://kriyado.com/terms-conditions/">
+
+                <span id="sp2" class="elementor-icon-list-tex" >Terms &
+                    Conditions</span>
+            </a><br><br>
+            <a style="text-decoration: none;" href="https://kriyado.com/privacy-policy/">
+
+                <span id="sp2"class="elementor-icon-list-text" >Privacy Policy</span>
+            </a><br><br>
+            <a href="https://kriyado.com/grievance-redressal-policy/" style="text-decoration: none;">
+
+                <span id="sp2" class="elementor-icon-list-text">Grievance Redressal
+                    Policy</span>
+            </a><br><br>
+            <a href="https://kriyado.com/cancellation-refund-policy/" style="text-decoration: none;">
+
+                <span id="sp2"class="elementor-icon-list-text" >Refund Policy</span>
+            </a>
+
+        </div>
+        <div style=" margin-left:319px;margin-top:-186px;width:210px;height:186px;background-color:#5e1c7d">
+            <a style="text-decoration: none;" href="https://kriyado.com/about-us/">
+
+                <span id="sp2" class="elementor-icon-list-text" >About Kriyado</span>
+            </a><br><br>
+            <a style="text-decoration: none;" href="pricing.html">
+
+                <span id="sp2" class="elementor-icon-list-text" >Pricing</span>
+            </a><br><br>
+            <a style="text-decoration: none;" href="https://kriyado.com/blog/">
+
+                <span id="sp2" class="elementor-icon-list-text" >Blog</span>
+            </a><br><br>
+            <a href="contact.html" style="text-decoration: none;">
+
+                <span id="sp2" class="elementor-icon-list-text">Contact us</span>
+            </a><br><br>
+            <a href="https://kriyado.com/download-kriyado-app/" style="text-decoration: none;">
+
+                <span id="sp2" class="elementor-icon-list-text" >Download</span>
+            </a>
+
+        </div>
+
+    </div>
+    <div style=" margin-top:-317px; margin-left:925px;background-color:#5e1c7d; width:198px;height:309px;">
+
+        <h2 style="margin-top: 13px; margin-left:10px; color:white;"> Contact Us</h2>
+
+        <div class="hu">
+
+            <div id="d3" style="margin-top:42px; margin-left:40px;width:108px; height:99px;background-color:#5e1c7d;">
+                <h5 class="title" style="color:violet;font-size:19px;">Email</h5>
+                <p class="icon-box-description" style="font-size:17px; margin-top:-9px;">
+                    <a href="mailto:support@kriyado.com" style=" text-decoration:none;color:white"
+                        target="_blank">support@kriyado.com</a>
+                </p>
+            </div>
+            <div id="d4" style="margin-top:-16px; margin-left:40px;width:141px; height:99px;background-color:#5e1c7d;">
+                <h5 class="title" style="color:violet;font-size:19px; margin-top:15px;">Phone</h5>
+                <p class="icon-box-description" style="font-size:17px; margin-top:-10px;">
+                    <a href="tel:+919048001820" style="text-decoration:none;color:white" target="_blank">+91 90480
+                        01820</a>
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <div style=" margin-top:64px;margin-left:12px;background-color:#5e1c7d; width:50%;">
+        <h1 style=" margin-top:1px;color:white;font-size: 27px;">Experience the Kriyado advantage <br>now.</h1>
+    </div>
+    <a href="pricing.html"><button id="sp3"
+        >
+         Pricing</button></a>
+    
+    <br>
+    <div>
+        <div id="x1"
+           >
+            <a style="text-decoration:none;" class="" href="https://www.facebook.com/KriyadoApp/"> X</a>
+        </div>
+        <div id="i5"
+           >
+            <a style="text-decoration:none;" class="" href="https://www.instagram.com/kriyadoapp/"><strong>&nbsp I</strong></a></div>
+        <div id="f1"
+            >
+            <strong>
+                <a id="f2" style="text-decoration:none;" class="" href="https://www.facebook.com/KriyadoApp/">&nbsp f</a>
+            </strong></div>
+    </div>
+    <div
+        style=" color:rgb(126, 121, 121);margin-top:139px;margin-left:430px;background-color:white;width:384px;height:50px;">
+        <p>Copyright © 2024 | Kriyado Discount Platform.</p>
+    </div>
+</div><br><br>
+ 
+   
+
+
+    
+
+
+
+</body>
+
+</html>
