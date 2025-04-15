@@ -1,0 +1,216 @@
+<?php
+$db=mysqli_connect("localhost","root","","demo") or die(mysqli_error());
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <style>
+        .form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.q1{
+    background: #FFFFFF;
+}
+#b1{
+  position:absolute; border-radius:7px; top:302px;margin-left:147px;background-color:green;
+}
+#b1:hover{
+  background-color:blue;
+}
+</style>
+</head>
+<body>
+    
+<div  style=" background-color:violet;position:absolute; left:437px; top:50px; width:394px;height:346px;border-radius:12px;">
+<h1 style="position:absolute; top:-53px; margin-left:69px;"><b>Employee form</b></h1>
+<form method="post" enctype="multipart/form-data">
+      <br>
+      <!-- <label >Enter employee Name</label> -->
+          <input type="text"  name="name" placeholder="Enter employee name" style="position:absolute; left:98px;top:9px;border-radius:11px;height:43px; color:red; background-color:yellow;"><br><br>
+          <!-- <label >Enter age</label> -->
+          <input type="text" name="age" placeholder="Enter age "  style=" position:absolute; left:98px;border-radius:11px;height:43px; top:66px;background-color:yellow;" ><br><br>
+          <!-- <label >Enter Salary</label> -->
+          <input type="text" name="salary" placeholder="Enter salary"  style="position:absolute; left:98px;border-radius:11px;height:43px; top:127px;background-color:yellow;"><br><br>
+          <!-- <label >Inset image</label> -->
+          <input type="file"  name="photo1" style="position:absolute; left:98px;border-radius:11px;height:43px; top:185px;"> <br><br>
+          <!-- <label >Insert image</label> -->
+          <input type="file"  name="photo2" style="position:absolute; left:98px;border-radius:11px;height:43px; top:243px;"> <br><br> 
+          
+          <button   type="submit" name="btn" id="b1" ><b>Submit</b></button>
+  </form>
+  <div>
+  <?php
+  if(isset($_POST['btn']))
+{
+    $name=addslashes($_POST['name']);
+    $age=addslashes($_POST['age']);
+    $salary=addslashes($_POST['salary']);
+    // $ins=mysqli_query($db,"insert into employee values('0','$name','$age','$salary')");
+    //*** */ image1
+    $fileName=$_FILES['photo1']['name'];
+   
+    
+ 
+    $fileTmpPath = $_FILES['photo1']['tmp_name'];
+       
+        $fileSize = $_FILES['photo1']['size'];
+        $fileType = $_FILES['photo1']['type'];
+        $fileNameCmps = explode(".", $fileName);
+        $fileExtension = strtolower(end($fileNameCmps));
+        $newFileName = md5(time() . $fileName) . '.' . $fileExtension;
+        
+        
+        
+        $allowedfileExtensions = array('jpg', 'gif', 'png','jpeg','webp');
+        if (in_array($fileExtension, $allowedfileExtensions))
+         {
+        $uploadFileDir = "./img/"; 
+        $dest_path = $uploadFileDir . $newFileName;
+        //$pd=date("d/m/y");
+        
+        
+        list($width, $height, $type, $attr) = getimagesize($fileTmpPath);
+           
+        
+      if($width=="550" && $height=="500")
+       {
+        move_uploaded_file($fileTmpPath, $dest_path);
+       //  $ins=mysqli_query($db,"insert into file_uploads values ('0','$newFileName','$a1','$a2','$a3','$a4','$a5','$a6' )");
+
+        // $ins=mysqli_query($db,"insert into employee values('0','$name','$age','$salary','$newFileName','$newFileName')");
+    
+        // echo("Successfully updated");
+               
+               
+          
+          
+      }
+      else
+      {
+      
+      
+       echo("image size should be between 500 & 550");
+     }
+  }
+  else
+      {
+      
+      
+       echo("Image extension should be jpg or png");
+      }
+
+
+// image2
+$fName=$_FILES['photo2']['name'];
+   
+    
+ 
+    $fileTmpPath = $_FILES['photo2']['tmp_name'];
+       
+        $fileSize = $_FILES['photo2']['size'];
+        $fileType = $_FILES['photo2']['type'];
+        $fileNameCmps = explode(".", $fName);
+        $fileExtension = strtolower(end($fileNameCmps));
+        $FileName = md5(time() . $fName) . '.' . $fileExtension;
+        
+        
+        
+        $allowedfileExtensions = array('jpg', 'gif', 'png','jpeg','webp');
+        if (in_array($fileExtension, $allowedfileExtensions))
+         {
+        $uploadFileDir = "./img/"; 
+        $dest_path = $uploadFileDir . $FileName;
+        //$pd=date("d/m/y");
+        
+        
+        list($width, $height, $type, $attr) = getimagesize($fileTmpPath);
+           
+        
+      if($width=="550" && $height=="500")
+       {
+        move_uploaded_file($fileTmpPath, $dest_path);
+       //  $ins=mysqli_query($db,"insert into file_uploads values ('0','$newFileName','$a1','$a2','$a3','$a4','$a5','$a6' )");
+
+       $ins=mysqli_query($db,"insert into employee values('0','$name','$age','$salary','$newFileName','$FileName')");
+    
+        // echo("Successfully updated");
+               
+               
+          
+          
+      }
+      else
+      {
+      
+      
+       echo("image size should be between 500 & 550");
+     }
+  }
+  else
+      {
+      
+      
+       echo("Image extension should be jpg or png");
+      }
+      
+}
+?>
+<br><br><br><br><br><br>
+<h1><b>Employee details<b></h1>
+<table class="table table-bordered">
+                        <thead>
+                          <tr>
+                            <th> ID </th>
+                            <th>Name</th>
+                            <th>Age</th>
+                            <th>Salary</th>
+                            <th>Image1</th>
+                            <th>Image2</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                          <?php $sql = mysqli_query($db,"select * from  employee");
+                 while($rql = mysqli_fetch_row($sql))
+                 {
+                     ?>
+                            <td><?php echo $rql[0]?></td>
+                            <td><?php echo $rql[1]?></td>
+                            <td><?php echo $rql[2]?></td>
+                            <td><?php echo $rql[3]?></td>
+                           
+                            <td> <img src="img/<?php echo $rql[4]?>" width="100" height ="100" alt="loading"></td>
+                            <td> <img src="img/<?php echo $rql[5]?>" width="100" height ="100" alt="loading"></td>
+                            <td><a href="employeedetailsedit.php?id=<?php echo $rql[0];?>"><i class="fa-solid fa-pen-to-square">edit</i></a></td>&&nbsp
+                            <td><a href="javascript:deletepro_id(<?php echo $rql[0];?>)"><i class="fa-solid fa-pen-to-square">delete</i></a></td>
+
+
+                          </tr>
+                          <?php
+                          }
+                          ?>
+
+
+
+                          
+                        </tbody>
+
+                     
+                      </table>
+
+
+</body>
+</html>
