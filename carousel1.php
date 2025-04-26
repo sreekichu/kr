@@ -1,0 +1,156 @@
+<?php
+$db=mysqli_connect('localhost','root','','demo');
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<style>
+    #b1{
+        position:absolute; background-color:blue;top:339px;margin-left:518px;border-radius:12px; width:74px;height:39px;
+    }
+    #b1:hover{
+        background-color:yellow;
+    }
+    table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+    </style>
+
+<body>
+
+    <div style=" position:absolute;top:61px;background-color:grey; width:1042px; height:634px;margin-left:171px;">
+        <div class="container"
+            style=" position:absolute;background-color:white; width:971px; top:34px;height:634px;margin-left:36px;">
+            <h5 style="position:absolute;font-size:20px;top:-18px;margin-left:17px;">Carousel Portion</h5>
+            <form method="post" enctype="multipart/form-data">
+           
+            <div style="position:absolute;">
+                <label style="position:absolute; top:67px; margin-left:12px;"> Slide1 para*</label>
+                <input type="text" name="s1p" placeholder="enter content for slide1" style="position:absolute; width:175px; height:23px; top:102px;margin-left:12px;">
+            </div>
+            <div style="position:absolute; margin-left:247px;">
+                <label style="position:absolute; top:67px; margin-left:12px;"> Slide2 para*</label>
+                <input type="text" name="s2p" placeholder="enter content for slide2" style="position:absolute; width:175px; height:23px; top:102px;margin-left:12px;">
+            </div>
+            <div style="position:absolute; margin-left:471px;">
+                <label style="position:absolute; top:67px; margin-left:12px;">Slide3 para*</label>
+                <input type="text" name="s3p" placeholder="enter content for slide3" style="position:absolute; width:175px; height:23px; top:102px;margin-left:12px;">
+            </div>
+            
+            <div style="position:absolute; margin-left:-1px;top:114px;">
+                <label style="position:absolute; top:67px; margin-left:12px;"> Slide1 text1*</label>
+                <input type="text" name="s1t1"  style="position:absolute; width:175px; height:23px; top:102px;margin-left:12px;">
+            </div>
+          
+            <div style="position:absolute; margin-left:459px;top:114px;">
+                <label style="position:absolute; top:67px; margin-left:12px;"> Slide2 text1*</label>
+                <input type="text" name="s2t1"  style="position:absolute; width:175px; height:23px; top:102px;margin-left:12px;">
+            </div>
+            <div style="position:absolute; margin-left:696px;top:114px;">
+                <label style="position:absolute; top:67px; margin-left:12px;"> Slide2 text2*</label>
+                <input type="text" name="s2t2"  style="position:absolute; width:175px; height:23px; top:102px;margin-left:12px;">
+            </div>
+            <div style="position:absolute; margin-left:240px;top:124px;">
+                <label style="position:absolute; top:53px; margin-left:12px;"> Slide1 text2*</label>
+                <input type="text" name="s1t2"  style="position:absolute; width:175px; height:23px; top:92px;margin-left:12px;">
+            </div>
+            <div style="position:absolute; margin-left:-1px;top:252px;">
+                <label style="position:absolute; top:54px; margin-left:12px;"> Slide3 text1*</label>
+                <input type="text" name="s3t1"  style="position:absolute; width:175px; height:23px; top:92px;margin-left:12px;">
+            </div>
+          <div style="position:absolute; top:241px; margin-left:239px;">
+              <label style="position:absolute; top:67px; margin-left:12px;">Slide3 text2*</label>
+              <input type="text" name="s3t2"  style="position:absolute; width:175px; height:23px; top:102px;margin-left:12px;">
+          </div>
+         
+            <button   type="submit" name="btn"  id="b1">Submit</button>
+</form>
+
+<br>
+<table   style="position:absolute;top: 446px;px;margin-left:97px;">
+    <thead>
+        <tr>
+            <th>ID </th>
+            <th>Slide1 para</th>
+            <th>Slide1 text1</th>
+            <th>Slide1 text2</th>
+            <th>Slide2 para</th>
+            <th>Slide2 text1</th>
+            <th>Slide2 text2</th>
+            <th>Slide3 para</th>
+            <th>Slide3 text1</th>
+            <th>Slide3 text2</th>
+            
+           
+</tr>
+</thead>
+<tbody>
+
+    <tr>
+        <?php 
+        $sql=mysqli_query($db,"select * from carousel");
+        while($row=mysqli_fetch_row($sql)){
+        ?>
+    
+    <td><?php echo $row[0] ?></td>
+    <td><?php echo $row[1] ?></td>
+    <td><?php echo $row[2] ?></td>
+    <td><?php echo $row[3] ?></td>
+    <td><?php echo $row[4] ?></td>
+    <td><?php echo $row[5] ?></td>
+    <td><?php echo $row[6] ?></td>
+    <td><?php echo $row[7] ?></td>
+    <td><?php echo $row[8] ?></td>
+    <td><?php echo $row[9] ?></td>
+    
+        </tr>
+        <?php
+        }
+        ?>
+</tbody>
+</table>
+        </div>
+
+    </div>
+    <?php
+    if(isset($_POST['btn']))
+{
+    $s1p=addslashes($_POST['s1p']);
+    $s2p=addslashes($_POST['s2p']);
+    $s3p=addslashes($_POST['s3p']);
+    $s1t1=addslashes($_POST['s1t1']);
+    $s2t1=addslashes($_POST['s2t1']);
+    $s3t1=addslashes($_POST['s3t1']);
+    $s1t2=addslashes($_POST['s1t2']);
+    $s2t2=addslashes($_POST['s2t2']);
+    $s3t2=addslashes($_POST['s3t2']);
+    $ins=mysqli_query($db,"insert into carousel values('0','$s1p','$s1t1','$s1t2','$s2p','$s2t1','$s2t2','$s3p','$s3t1','$s3t2')");
+    if($ins){
+          msg("Sucessfully updated","carousel1.php");
+        }
+    else{
+        echo"insertion failed";
+    }
+     
+      
+}
+?>
+
+<?php
+
+
+function msg($a,$b)
+{
+echo "<script language='javascript'>alert('$a');window.location='$b';</script>";
+}
+?>
+
+</body>
+
+</html>
