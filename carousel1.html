@@ -132,7 +132,8 @@ $db=mysqli_connect('localhost','root','','demo');
     $s3t2=addslashes($_POST['s3t2']);
     $ins=mysqli_query($db,"insert into carousel values('0','$s1p','$s1t1','$s1t2','$s2p','$s2t1','$s2t2','$s3p','$s3t1','$s3t2')");
     if($ins){
-          msg("Sucessfully updated","carousel1.html");
+<!--           msg("Sucessfully updated","carousel1.html"); -->
+    echo"success";
         }
     else{
         echo"insertion failed";
@@ -142,14 +143,14 @@ $db=mysqli_connect('localhost','root','','demo');
 }
 ?>
 
-<?php
+<!-- <?php
 
 
 function msg($a,$b)
 {
 echo "<script language='javascript'>alert('$a');window.location='$b';</script>";
 }
-?>
+?> -->
 
 </body>
 
